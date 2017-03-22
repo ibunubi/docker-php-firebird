@@ -1,24 +1,22 @@
-# PHP with Firebird module Dockerfile
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/almeida/php-firebird.svg)](https://hub.docker.com/r/almeida/php-firebird/)
-[![Docker Stars](https://img.shields.io/docker/stars/almeida/php-firebird.svg)](https://hub.docker.com/r/almeida/php-firebird/)
+# PHP with Firebird module & Firebird Server Dockerfile
 
 ## Description
 
- Minimal PHP with Firebird module + nginx
-
-### Volumes
-
- * /usr/share/nginx/html
+ Minimal PHP with Firebird module + nginx + Firebird server
 
 ### Exposed Ports
 
- * 80
+ * 80 
+ * 3050
+
+## Build Image
+`./build.sh [tag-name]`
 
 ## Run
+* `./run.sh [image tag/id]` access to port `8081`
+* `./run-app.sh [image tag/id]` access to port `8082`
 
-	$ docker run -d \
-		--name php-firebird \	
-		-p 80:80 \
-		-v /somehostdir/php/:/usr/share/nginx/html/ \
-		almeida/php-firebird
+
+### Credits
+
+this image is modified from [Almeida Hub](https://hub.docker.com/r/almeida/php-firebird/)
